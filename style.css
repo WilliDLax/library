@@ -1,0 +1,26 @@
+body{
+    background-color: blueviolet;
+}
+
+#book-form{
+    display: none;
+    width: fit-content;
+    position: fixed;
+    left: 40vw;
+    top: 50px;
+    padding: 5px;
+    border: hidden 3px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
+
+.card{
+    width: 600px;
+    background-color: rgb(20, 220, 220);
+    border: hidden 2px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: monospace;
+}
