@@ -24,12 +24,15 @@
             <br><br>
             <label>
                 Pages <br>
-                <input type="number" id="pages" required>
+                <input type="number" min="1" id="pages" required>
             </label>
             <br><br>
             <label>
-                Read <br>
-                <input type="text" id="status" required>
+                Status 
+                <select id="status">
+                    <option value="unread">Unread</option>
+                    <option value="read">Read</option>
+                </select>
             </label>
             <br><br>
             <button id="add">Add Book</button>
