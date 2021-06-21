@@ -6,37 +6,40 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
+        <div class="top">
             <h1>Lax-Library</h1> 
             <button id="new-book">Add a Book</button>
         </div>
         <hr>
-        <div id="book-form">
-            <label>
-                Title <br>
-                <input type="text" id="title" required>
-            </label>
-            <br><br>
-            <label>
-                Author <br>
-                <input type="text" id="author" required>
-            </label>
-            <br><br>
-            <label>
-                Pages <br>
-                <input type="number" min="1" id="pages" required>
-            </label>
-            <br><br>
-            <label>
-                Status 
-                <select id="status">
-                    <option value="unread">Unread</option>
-                    <option value="read">Read</option>
-                </select>
-            </label>
-            <br><br>
-            <button id="add">Add Book</button>
-            <button id="cancel">Cancel</button>
+        <div id="main-container">
+            <div id="library"></div>
+            <div id="book-form">
+                <label>
+                    Title <br>
+                    <input type="text" id="title" required>
+                </label>
+                <br><br>
+                <label>
+                    Author <br>
+                    <input type="text" id="author" required>
+                </label>
+                <br><br>
+                <label>
+                    Pages <br>
+                    <input type="number" min="1" id="pages" required>
+                </label>
+                <br><br>
+                <label>
+                    Status 
+                    <select id="status">
+                        <option value="unread">Unread</option>
+                        <option value="read">Read</option>
+                    </select>
+                </label>
+                <br><br>
+                <button id="add">Add Book</button>
+                <button id="cancel">Cancel</button>
+            </div>
         </div>
 
         <script src ="library.js"></script>

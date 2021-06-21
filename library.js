@@ -13,7 +13,10 @@ function Book(
 }
 
 Book.prototype.info = function(){
-    return `${this.title} by ${this.author}, with ${this.pages} pages.`;
+    return `${this.title} by ${this.author}`;
+}
+Book.prototype.pageNumber = function(){
+    return `${this.pages} pages`;
 }
 
 Book.prototype.changeStatus = function(){
@@ -63,9 +66,14 @@ myLibrary.forEach((book) => {
     let bookCard = document.createElement("div");
     bookCard.classList.add("card");
     bookCard.textContent = book.info();
-    document.querySelector("body").appendChild(bookCard);
+    document.getElementById("library").appendChild(bookCard);
+
+    let numberOfPages = document.createElement("p");
+    numberOfPages.textContent = book.pageNumber();
+    bookCard.appendChild(numberOfPages);
 
     let statusbar = document.createElement("div");
+    statusbar.classList.add("status-bar");
     statusbar.textContent = book.status;
     statusbar.addEventListener("click", () => {
         book.changeStatus();
@@ -74,6 +82,7 @@ myLibrary.forEach((book) => {
     bookCard.appendChild(statusbar);
 
     let deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-button");
     deleteButton.innerText = "delete";
     deleteButton.addEventListener("click", () => {
         bookCard.style.display = "none";
@@ -96,9 +105,14 @@ function addToLibrary(){
     let bookCard = document.createElement("div");
     bookCard.textContent = book.info();
     bookCard.classList.add("card");
-    document.querySelector("body").appendChild(bookCard);
+    document.getElementById("library").appendChild(bookCard);
+
+    let numberOfPages = document.createElement("p");
+    numberOfPages.textContent = book.pageNumber();
+    bookCard.appendChild(numberOfPages);
 
     let statusbar = document.createElement("div");
+    statusbar.classList.add("status-bar");
     statusbar.textContent = book.status;
     statusbar.addEventListener("click", () => {
         book.changeStatus();
@@ -107,6 +121,7 @@ function addToLibrary(){
     bookCard.appendChild(statusbar);
 
     let deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-button");
     deleteButton.innerText = "delete";
     bookCard.appendChild(deleteButton);
     deleteButton.addEventListener("click", () => {

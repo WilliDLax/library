@@ -1,26 +1,83 @@
 body{
-    background-color: blueviolet;
+    background-image: linear-gradient(90deg, silver, black);
+}
+
+.top{
+    text-align: center;
+}
+
+#library{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 69%;
+    float: left;
 }
 
 #book-form{
     display: none;
-    width: fit-content;
-    position: fixed;
-    left: 40vw;
-    top: 50px;
-    padding: 5px;
-    border: hidden 3px;
-    border-radius: 10px;
-    background-color: cornflowerblue;
+    width: 30%;
+    height: 400px;
+    margin-top: 10px;
+    float: right;
+    border-radius: 5px;
+    padding: 5px 0 5px 5px;
+    background-image: linear-gradient(160deg, silver, black);
+}
+
+label{
+    font-family: monospace;
+    font-size: 20px;
+}
+input{
+    width: 95%;
+    height: 24px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+select{
+    border-radius: 3px;
+    padding: 4px;
+}
+
+button{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.delete-button{
+    float: right;
+}
+.delete-button:hover{
+    background-color: orangered;
 }
 
 .card{
-    width: 600px;
-    background-color: rgb(20, 220, 220);
-    border: hidden 2px;
+    width: auto;
+    background-image: linear-gradient(160deg, silver, black);
+    border: solid 2px;
     padding: 15px;
     margin: 10px;
     border-radius: 10px;
     font-size: 20px;
     font-family: monospace;
+    box-shadow: -5px 5px 3px orangered;
+}
+
+.card:hover{
+    border: solid 2px silver;
+}
+
+.status-bar{
+    background-color: silver;
+    font-size: 16px;
+    width: 60px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    padding: 2px;
+    border: groove 1px black;
+    border-radius: 3px;
+    cursor: default;
+}
+.status-bar:hover{
+    box-shadow: -2px -2px 2px black;
 }
