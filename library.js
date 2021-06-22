@@ -39,29 +39,22 @@ let book1 = new Book(
 );
 let book2 = new Book(
     "Hunger games",
-    "J.k Rowling",
+    "Susane Collins",
     532,
-    "read"
+    "unread"
 );
 let book3 = new Book(
-    "Catching fire",
-    "J.k Rowling",
-    126,
-    "read"
-);
-let book4 = new Book(
     "Terror man",
     "Jung woo",
     896,
-    "read"
+    "unread"
 );
 
 myLibrary.push(book1);
 myLibrary.push(book2);
 myLibrary.push(book3);
-myLibrary.push(book4);
 
-
+//display sample books
 myLibrary.forEach((book) => {
     let bookCard = document.createElement("div");
     bookCard.classList.add("card");
@@ -92,7 +85,7 @@ myLibrary.forEach((book) => {
     bookCard.appendChild(deleteButton);
 });
 
-
+//add a book to the library
 function addToLibrary(){
     let book = new Book(
         document.getElementById("title").value,
@@ -127,11 +120,12 @@ function addToLibrary(){
     deleteButton.addEventListener("click", () => {
         myLibrary.splice(myLibrary.indexOf(book),1);
         bookCard.style.display = "none";
-        console.table(myLibrary);
     });
 
     bookForm.style.display = "none";
-    console.table(myLibrary);
+    document.getElementById("title").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("pages").value = "";
 }
 
 const addButton = document.getElementById("add");
